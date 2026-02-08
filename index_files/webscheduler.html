@@ -1,0 +1,317 @@
+
+<!-- saved from url=(0079)https://go.servicetitan.com/webscheduler?tenantid=703164584&campaignid=71961850 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript">
+    window.webScheduler = {
+        tenantId: 703164584,
+        tenantName: "jbirrigation",
+        businessUnitId: 0,
+        campaignId: "71961850",
+        displayRealTimeAvailability: "True" === "True",
+        hideWeekendAvailability: "True" === "True",
+        //all usages of baseUrl were removed(hopefully). We will remove this property soon.
+        baseUrl: "https://go.servicetitan.com",
+        contries: ["USA","Canada"],
+        statesByCountry: {"USA":["Alabama","Alaska","American Samoa","Arizona","Arkansas","California","Colorado","Connecticut","D.C.","Delaware","Federated States of Micronesia","Florida","Georgia","Guam","Hawaii","Idaho","Illinois","Indiana","Iowa","Kansas","Kentucky","Louisiana","Maine","Marshall Islands","Maryland","Massachusetts","Michigan","Minnesota","Mississippi","Missouri","Montana","Nebraska","Nevada","New Hampshire","New Jersey","New Mexico","New York","North Carolina","North Dakota","Northern Mariana Islands","Ohio","Oklahoma","Oregon","Palau","Pennsylvania","Puerto Rico","Rhode Island","South Carolina","South Dakota","Tennessee","Texas","Utah","Vermont","Virgin Islands","Virginia","Washington","West Virginia","Wisconsin","Wyoming"],"Canada":["Alberta","British Columbia","Manitoba","New Brunswick","Newfoundland and Labrador","Northwest Territories","Nova Scotia","Nunavut","Ontario","Prince Edward Island","Quebec","Saskatchewan","Yukon"]},
+        firstAvailableDate: "2026-02-09T00:00:00.0000000Z",
+        agentTag: "WebScheduler"
+    };
+
+</script>
+
+
+
+
+
+    <title>ServiceTitan web scheduler</title>
+    <meta name="robots" content="noindex">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link href="./css" rel="stylesheet">
+    <link href="./web-scheduler-css.1440b607838f8f2ab2b4.bundle.css" rel="stylesheet">
+    <script type="text/javascript" src="./web-scheduler.4a4f772c197407a9a6ce.bundle.js.download"></script>
+</head>
+<body>
+    <article class="mobile-responsive">
+        <div id="main-container">
+            <div class="loading-screen" data-bind="visible: IsLoading" style="display: none;">
+                <div class="loading-screen-content"><b>L O A D I N G</b></div>
+            </div>
+            <div class="web-scheduler-form" data-bind="visible: CurrentStep() == &#39;FillForm&#39;" style="display: none;">
+                <div class="step-label step-label-1">1</div>
+                <div class="row web-scheduler-datetime-row" data-bind="click: OpenCalendar">
+                    <div class="web-scheduler-datetime column column-100" id="header">
+                        <span data-bind="text: Time() ? (Time().Start + Date().format(&#39; on dddd, MMMM D&#39;)) : &#39;SELECT DATE AND TIME&#39;,
+                          css: {&#39;web-scheduler-select-time&#39;: !Time(), &#39;has-error&#39;: !Time() &amp;&amp; TimeIsRequiredWarning()}" class="web-scheduler-select-time">SELECT DATE AND TIME</span>
+                    </div>
+                    <label style="margin-top:15px;">All fields are required<span class="asterisk">*</span></label>
+                </div>
+                <div class="step-label step-label-2">2</div>
+                <div class="web-scheduler-inputs">
+                    <div class="row">
+                        <div class="column">
+                            <label>Name</label>
+                            <div>
+                                <input type="text" class="form-control" data-bind="value: Name"><span class="help-block" style="display: none;"></span>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <label>Phone number</label>
+                            <div>
+                                <input type="tel" class="form-control" data-bind="value: Phone"><span class="help-block" style="display: none;"></span>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <label>Email</label>
+                            <div>
+                                <input type="email" class="form-control" data-bind="value: Email"><span class="help-block" style="display: none;"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="column">
+                            <label>Street address</label>
+                            <div>
+                                <input type="text" class="form-control" data-bind="value: Street"><span class="help-block" style="display: none;"></span>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <label>City</label>
+                            <div>
+                                <input type="text" class="form-control" data-bind="value: City"><span class="help-block" style="display: none;"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <label data-bind="text: Country() == &#39;Canada&#39; ? &#39;Province&#39; : &#39;State&#39;">State</label>
+                            <div>
+                                <select class="form-control" data-bind="value: State, options: window.webScheduler.statesByCountry[Country()], optionsCaption: &#39; &#39;"><option value=""> </option><option value="Alabama">Alabama</option><option value="Alaska">Alaska</option><option value="American Samoa">American Samoa</option><option value="Arizona">Arizona</option><option value="Arkansas">Arkansas</option><option value="California">California</option><option value="Colorado">Colorado</option><option value="Connecticut">Connecticut</option><option value="D.C.">D.C.</option><option value="Delaware">Delaware</option><option value="Federated States of Micronesia">Federated States of Micronesia</option><option value="Florida">Florida</option><option value="Georgia">Georgia</option><option value="Guam">Guam</option><option value="Hawaii">Hawaii</option><option value="Idaho">Idaho</option><option value="Illinois">Illinois</option><option value="Indiana">Indiana</option><option value="Iowa">Iowa</option><option value="Kansas">Kansas</option><option value="Kentucky">Kentucky</option><option value="Louisiana">Louisiana</option><option value="Maine">Maine</option><option value="Marshall Islands">Marshall Islands</option><option value="Maryland">Maryland</option><option value="Massachusetts">Massachusetts</option><option value="Michigan">Michigan</option><option value="Minnesota">Minnesota</option><option value="Mississippi">Mississippi</option><option value="Missouri">Missouri</option><option value="Montana">Montana</option><option value="Nebraska">Nebraska</option><option value="Nevada">Nevada</option><option value="New Hampshire">New Hampshire</option><option value="New Jersey">New Jersey</option><option value="New Mexico">New Mexico</option><option value="New York">New York</option><option value="North Carolina">North Carolina</option><option value="North Dakota">North Dakota</option><option value="Northern Mariana Islands">Northern Mariana Islands</option><option value="Ohio">Ohio</option><option value="Oklahoma">Oklahoma</option><option value="Oregon">Oregon</option><option value="Palau">Palau</option><option value="Pennsylvania">Pennsylvania</option><option value="Puerto Rico">Puerto Rico</option><option value="Rhode Island">Rhode Island</option><option value="South Carolina">South Carolina</option><option value="South Dakota">South Dakota</option><option value="Tennessee">Tennessee</option><option value="Texas">Texas</option><option value="Utah">Utah</option><option value="Vermont">Vermont</option><option value="Virgin Islands">Virgin Islands</option><option value="Virginia">Virginia</option><option value="Washington">Washington</option><option value="West Virginia">West Virginia</option><option value="Wisconsin">Wisconsin</option><option value="Wyoming">Wyoming</option></select><span class="help-block" style="display: none;"></span>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <label>Country</label>
+                            <div>
+                                <select class="form-control" data-bind="value: Country, options: window.webScheduler.contries"><option value="USA">USA</option><option value="Canada">Canada</option></select><span class="help-block" style="display: none;"></span>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <label data-bind="text: Country() == &#39;Canada&#39; ? &#39;Postal code&#39; : &#39;Zip code&#39;">Zip code</label>
+                            <div>
+                                <input type="text" class="form-control" data-bind="value: Zip"><span class="help-block" style="display: none;"></span>
+                            </div>
+                        </div>
+                    </div>
+                        
+                    <div class="row">
+                        <div class="column column-100">
+                            <label>How can we help?</label>
+                            <div>
+                                <textarea rows="3" class="form-control" data-bind="value: Summary" placeholder="I would like help with..."></textarea><span class="help-block" style="display: none;"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="padding-top:35px;">
+                    <a class="web-scheduler-submit btn col-lg-2" data-bind="click:Send" ,="" onmouseover="document.activeElement.blur()">SUBMIT</a>
+                </div>
+            </div>
+            <div class="web-scheduler-datepicker text-center" data-bind="visible: CurrentStep() == &#39;SelectDate&#39;">
+                <label class="month" data-bind="text: Date().format(&#39;MMMM&#39;)">February</label>
+                <div class="calendar-wrap">
+                    <button type="button" class="backward disabled" disabled=""><i class="fa fa-chevron-left"></i></button>
+                    <button type="button" class="forward"><i class="fa fa-chevron-right"></i></button>
+                    <div class="frame-wrap">
+                        <div class="frame" style="overflow: hidden;">
+                            <ul class="slidee" data-bind="foreach: CalendarDays" style="transform: translateZ(0px); width: 5040px;">
+                                <li data-bind="click: $parent.SelectDate, css: {active: $data.format(&#39;YYYY-MM-DD&#39;) == $root.Date().format(&#39;YYYY-MM-DD&#39;), inactive: $data &lt; $root.FirstAvailableDate }" class="">
+                                    <p class="day-of-week" data-bind="text: $data.format(&#39;dddd&#39;)">Monday</p>
+                                    <p class="day-number" data-bind="text: $data.format(&#39;D&#39;)">9</p>
+                                </li>
+                            
+                                <li data-bind="click: $parent.SelectDate, css: {active: $data.format(&#39;YYYY-MM-DD&#39;) == $root.Date().format(&#39;YYYY-MM-DD&#39;), inactive: $data &lt; $root.FirstAvailableDate }" class="">
+                                    <p class="day-of-week" data-bind="text: $data.format(&#39;dddd&#39;)">Tuesday</p>
+                                    <p class="day-number" data-bind="text: $data.format(&#39;D&#39;)">10</p>
+                                </li>
+                            
+                                <li data-bind="click: $parent.SelectDate, css: {active: $data.format(&#39;YYYY-MM-DD&#39;) == $root.Date().format(&#39;YYYY-MM-DD&#39;), inactive: $data &lt; $root.FirstAvailableDate }" class="">
+                                    <p class="day-of-week" data-bind="text: $data.format(&#39;dddd&#39;)">Wednesday</p>
+                                    <p class="day-number" data-bind="text: $data.format(&#39;D&#39;)">11</p>
+                                </li>
+                            
+                                <li data-bind="click: $parent.SelectDate, css: {active: $data.format(&#39;YYYY-MM-DD&#39;) == $root.Date().format(&#39;YYYY-MM-DD&#39;), inactive: $data &lt; $root.FirstAvailableDate }" class="">
+                                    <p class="day-of-week" data-bind="text: $data.format(&#39;dddd&#39;)">Thursday</p>
+                                    <p class="day-number" data-bind="text: $data.format(&#39;D&#39;)">12</p>
+                                </li>
+                            
+                                <li data-bind="click: $parent.SelectDate, css: {active: $data.format(&#39;YYYY-MM-DD&#39;) == $root.Date().format(&#39;YYYY-MM-DD&#39;), inactive: $data &lt; $root.FirstAvailableDate }" class="">
+                                    <p class="day-of-week" data-bind="text: $data.format(&#39;dddd&#39;)">Friday</p>
+                                    <p class="day-number" data-bind="text: $data.format(&#39;D&#39;)">13</p>
+                                </li>
+                            
+                                <li data-bind="click: $parent.SelectDate, css: {active: $data.format(&#39;YYYY-MM-DD&#39;) == $root.Date().format(&#39;YYYY-MM-DD&#39;), inactive: $data &lt; $root.FirstAvailableDate }" class="">
+                                    <p class="day-of-week" data-bind="text: $data.format(&#39;dddd&#39;)">Monday</p>
+                                    <p class="day-number" data-bind="text: $data.format(&#39;D&#39;)">16</p>
+                                </li>
+                            
+                                <li data-bind="click: $parent.SelectDate, css: {active: $data.format(&#39;YYYY-MM-DD&#39;) == $root.Date().format(&#39;YYYY-MM-DD&#39;), inactive: $data &lt; $root.FirstAvailableDate }" class="">
+                                    <p class="day-of-week" data-bind="text: $data.format(&#39;dddd&#39;)">Tuesday</p>
+                                    <p class="day-number" data-bind="text: $data.format(&#39;D&#39;)">17</p>
+                                </li>
+                            
+                                <li data-bind="click: $parent.SelectDate, css: {active: $data.format(&#39;YYYY-MM-DD&#39;) == $root.Date().format(&#39;YYYY-MM-DD&#39;), inactive: $data &lt; $root.FirstAvailableDate }" class="">
+                                    <p class="day-of-week" data-bind="text: $data.format(&#39;dddd&#39;)">Wednesday</p>
+                                    <p class="day-number" data-bind="text: $data.format(&#39;D&#39;)">18</p>
+                                </li>
+                            
+                                <li data-bind="click: $parent.SelectDate, css: {active: $data.format(&#39;YYYY-MM-DD&#39;) == $root.Date().format(&#39;YYYY-MM-DD&#39;), inactive: $data &lt; $root.FirstAvailableDate }" class="">
+                                    <p class="day-of-week" data-bind="text: $data.format(&#39;dddd&#39;)">Thursday</p>
+                                    <p class="day-number" data-bind="text: $data.format(&#39;D&#39;)">19</p>
+                                </li>
+                            
+                                <li data-bind="click: $parent.SelectDate, css: {active: $data.format(&#39;YYYY-MM-DD&#39;) == $root.Date().format(&#39;YYYY-MM-DD&#39;), inactive: $data &lt; $root.FirstAvailableDate }" class="">
+                                    <p class="day-of-week" data-bind="text: $data.format(&#39;dddd&#39;)">Friday</p>
+                                    <p class="day-number" data-bind="text: $data.format(&#39;D&#39;)">20</p>
+                                </li>
+                            
+                                <li data-bind="click: $parent.SelectDate, css: {active: $data.format(&#39;YYYY-MM-DD&#39;) == $root.Date().format(&#39;YYYY-MM-DD&#39;), inactive: $data &lt; $root.FirstAvailableDate }" class="">
+                                    <p class="day-of-week" data-bind="text: $data.format(&#39;dddd&#39;)">Monday</p>
+                                    <p class="day-number" data-bind="text: $data.format(&#39;D&#39;)">23</p>
+                                </li>
+                            
+                                <li data-bind="click: $parent.SelectDate, css: {active: $data.format(&#39;YYYY-MM-DD&#39;) == $root.Date().format(&#39;YYYY-MM-DD&#39;), inactive: $data &lt; $root.FirstAvailableDate }" class="">
+                                    <p class="day-of-week" data-bind="text: $data.format(&#39;dddd&#39;)">Tuesday</p>
+                                    <p class="day-number" data-bind="text: $data.format(&#39;D&#39;)">24</p>
+                                </li>
+                            
+                                <li data-bind="click: $parent.SelectDate, css: {active: $data.format(&#39;YYYY-MM-DD&#39;) == $root.Date().format(&#39;YYYY-MM-DD&#39;), inactive: $data &lt; $root.FirstAvailableDate }" class="">
+                                    <p class="day-of-week" data-bind="text: $data.format(&#39;dddd&#39;)">Wednesday</p>
+                                    <p class="day-number" data-bind="text: $data.format(&#39;D&#39;)">25</p>
+                                </li>
+                            
+                                <li data-bind="click: $parent.SelectDate, css: {active: $data.format(&#39;YYYY-MM-DD&#39;) == $root.Date().format(&#39;YYYY-MM-DD&#39;), inactive: $data &lt; $root.FirstAvailableDate }" class="">
+                                    <p class="day-of-week" data-bind="text: $data.format(&#39;dddd&#39;)">Thursday</p>
+                                    <p class="day-number" data-bind="text: $data.format(&#39;D&#39;)">26</p>
+                                </li>
+                            
+                                <li data-bind="click: $parent.SelectDate, css: {active: $data.format(&#39;YYYY-MM-DD&#39;) == $root.Date().format(&#39;YYYY-MM-DD&#39;), inactive: $data &lt; $root.FirstAvailableDate }" class="">
+                                    <p class="day-of-week" data-bind="text: $data.format(&#39;dddd&#39;)">Friday</p>
+                                    <p class="day-number" data-bind="text: $data.format(&#39;D&#39;)">27</p>
+                                </li>
+                            
+                                <li data-bind="click: $parent.SelectDate, css: {active: $data.format(&#39;YYYY-MM-DD&#39;) == $root.Date().format(&#39;YYYY-MM-DD&#39;), inactive: $data &lt; $root.FirstAvailableDate }" class="">
+                                    <p class="day-of-week" data-bind="text: $data.format(&#39;dddd&#39;)">Monday</p>
+                                    <p class="day-number" data-bind="text: $data.format(&#39;D&#39;)">2</p>
+                                </li>
+                            
+                                <li data-bind="click: $parent.SelectDate, css: {active: $data.format(&#39;YYYY-MM-DD&#39;) == $root.Date().format(&#39;YYYY-MM-DD&#39;), inactive: $data &lt; $root.FirstAvailableDate }" class="">
+                                    <p class="day-of-week" data-bind="text: $data.format(&#39;dddd&#39;)">Tuesday</p>
+                                    <p class="day-number" data-bind="text: $data.format(&#39;D&#39;)">3</p>
+                                </li>
+                            
+                                <li data-bind="click: $parent.SelectDate, css: {active: $data.format(&#39;YYYY-MM-DD&#39;) == $root.Date().format(&#39;YYYY-MM-DD&#39;), inactive: $data &lt; $root.FirstAvailableDate }" class="">
+                                    <p class="day-of-week" data-bind="text: $data.format(&#39;dddd&#39;)">Wednesday</p>
+                                    <p class="day-number" data-bind="text: $data.format(&#39;D&#39;)">4</p>
+                                </li>
+                            
+                                <li data-bind="click: $parent.SelectDate, css: {active: $data.format(&#39;YYYY-MM-DD&#39;) == $root.Date().format(&#39;YYYY-MM-DD&#39;), inactive: $data &lt; $root.FirstAvailableDate }" class="">
+                                    <p class="day-of-week" data-bind="text: $data.format(&#39;dddd&#39;)">Thursday</p>
+                                    <p class="day-number" data-bind="text: $data.format(&#39;D&#39;)">5</p>
+                                </li>
+                            
+                                <li data-bind="click: $parent.SelectDate, css: {active: $data.format(&#39;YYYY-MM-DD&#39;) == $root.Date().format(&#39;YYYY-MM-DD&#39;), inactive: $data &lt; $root.FirstAvailableDate }" class="">
+                                    <p class="day-of-week" data-bind="text: $data.format(&#39;dddd&#39;)">Friday</p>
+                                    <p class="day-number" data-bind="text: $data.format(&#39;D&#39;)">6</p>
+                                </li>
+                            
+                                <li data-bind="click: $parent.SelectDate, css: {active: $data.format(&#39;YYYY-MM-DD&#39;) == $root.Date().format(&#39;YYYY-MM-DD&#39;), inactive: $data &lt; $root.FirstAvailableDate }" class="">
+                                    <p class="day-of-week" data-bind="text: $data.format(&#39;dddd&#39;)">Monday</p>
+                                    <p class="day-number" data-bind="text: $data.format(&#39;D&#39;)">9</p>
+                                </li>
+                            
+                                <li data-bind="click: $parent.SelectDate, css: {active: $data.format(&#39;YYYY-MM-DD&#39;) == $root.Date().format(&#39;YYYY-MM-DD&#39;), inactive: $data &lt; $root.FirstAvailableDate }" class="">
+                                    <p class="day-of-week" data-bind="text: $data.format(&#39;dddd&#39;)">Tuesday</p>
+                                    <p class="day-number" data-bind="text: $data.format(&#39;D&#39;)">10</p>
+                                </li>
+                            
+                                <li data-bind="click: $parent.SelectDate, css: {active: $data.format(&#39;YYYY-MM-DD&#39;) == $root.Date().format(&#39;YYYY-MM-DD&#39;), inactive: $data &lt; $root.FirstAvailableDate }" class="">
+                                    <p class="day-of-week" data-bind="text: $data.format(&#39;dddd&#39;)">Wednesday</p>
+                                    <p class="day-number" data-bind="text: $data.format(&#39;D&#39;)">11</p>
+                                </li>
+                            
+                                <li data-bind="click: $parent.SelectDate, css: {active: $data.format(&#39;YYYY-MM-DD&#39;) == $root.Date().format(&#39;YYYY-MM-DD&#39;), inactive: $data &lt; $root.FirstAvailableDate }" class="">
+                                    <p class="day-of-week" data-bind="text: $data.format(&#39;dddd&#39;)">Thursday</p>
+                                    <p class="day-number" data-bind="text: $data.format(&#39;D&#39;)">12</p>
+                                </li>
+                            
+                                <li data-bind="click: $parent.SelectDate, css: {active: $data.format(&#39;YYYY-MM-DD&#39;) == $root.Date().format(&#39;YYYY-MM-DD&#39;), inactive: $data &lt; $root.FirstAvailableDate }" class="">
+                                    <p class="day-of-week" data-bind="text: $data.format(&#39;dddd&#39;)">Friday</p>
+                                    <p class="day-number" data-bind="text: $data.format(&#39;D&#39;)">13</p>
+                                </li>
+                            
+                                <li data-bind="click: $parent.SelectDate, css: {active: $data.format(&#39;YYYY-MM-DD&#39;) == $root.Date().format(&#39;YYYY-MM-DD&#39;), inactive: $data &lt; $root.FirstAvailableDate }" class="">
+                                    <p class="day-of-week" data-bind="text: $data.format(&#39;dddd&#39;)">Monday</p>
+                                    <p class="day-number" data-bind="text: $data.format(&#39;D&#39;)">16</p>
+                                </li>
+                            
+                                <li data-bind="click: $parent.SelectDate, css: {active: $data.format(&#39;YYYY-MM-DD&#39;) == $root.Date().format(&#39;YYYY-MM-DD&#39;), inactive: $data &lt; $root.FirstAvailableDate }" class="">
+                                    <p class="day-of-week" data-bind="text: $data.format(&#39;dddd&#39;)">Tuesday</p>
+                                    <p class="day-number" data-bind="text: $data.format(&#39;D&#39;)">17</p>
+                                </li>
+                            
+                                <li data-bind="click: $parent.SelectDate, css: {active: $data.format(&#39;YYYY-MM-DD&#39;) == $root.Date().format(&#39;YYYY-MM-DD&#39;), inactive: $data &lt; $root.FirstAvailableDate }" class="">
+                                    <p class="day-of-week" data-bind="text: $data.format(&#39;dddd&#39;)">Wednesday</p>
+                                    <p class="day-number" data-bind="text: $data.format(&#39;D&#39;)">18</p>
+                                </li>
+                            
+                                <li data-bind="click: $parent.SelectDate, css: {active: $data.format(&#39;YYYY-MM-DD&#39;) == $root.Date().format(&#39;YYYY-MM-DD&#39;), inactive: $data &lt; $root.FirstAvailableDate }" class="">
+                                    <p class="day-of-week" data-bind="text: $data.format(&#39;dddd&#39;)">Thursday</p>
+                                    <p class="day-number" data-bind="text: $data.format(&#39;D&#39;)">19</p>
+                                </li>
+                            
+                                <li data-bind="click: $parent.SelectDate, css: {active: $data.format(&#39;YYYY-MM-DD&#39;) == $root.Date().format(&#39;YYYY-MM-DD&#39;), inactive: $data &lt; $root.FirstAvailableDate }" class="">
+                                    <p class="day-of-week" data-bind="text: $data.format(&#39;dddd&#39;)">Friday</p>
+                                    <p class="day-number" data-bind="text: $data.format(&#39;D&#39;)">20</p>
+                                </li>
+                            
+                                <li data-bind="click: $parent.SelectDate, css: {active: $data.format(&#39;YYYY-MM-DD&#39;) == $root.Date().format(&#39;YYYY-MM-DD&#39;), inactive: $data &lt; $root.FirstAvailableDate }" class="">
+                                    <p class="day-of-week" data-bind="text: $data.format(&#39;dddd&#39;)">Monday</p>
+                                    <p class="day-number" data-bind="text: $data.format(&#39;D&#39;)">23</p>
+                                </li>
+                            
+                                <li data-bind="click: $parent.SelectDate, css: {active: $data.format(&#39;YYYY-MM-DD&#39;) == $root.Date().format(&#39;YYYY-MM-DD&#39;), inactive: $data &lt; $root.FirstAvailableDate }" class="">
+                                    <p class="day-of-week" data-bind="text: $data.format(&#39;dddd&#39;)">Tuesday</p>
+                                    <p class="day-number" data-bind="text: $data.format(&#39;D&#39;)">24</p>
+                                </li>
+                            
+                                <li data-bind="click: $parent.SelectDate, css: {active: $data.format(&#39;YYYY-MM-DD&#39;) == $root.Date().format(&#39;YYYY-MM-DD&#39;), inactive: $data &lt; $root.FirstAvailableDate }" class="">
+                                    <p class="day-of-week" data-bind="text: $data.format(&#39;dddd&#39;)">Wednesday</p>
+                                    <p class="day-number" data-bind="text: $data.format(&#39;D&#39;)">25</p>
+                                </li>
+                            
+                                <li data-bind="click: $parent.SelectDate, css: {active: $data.format(&#39;YYYY-MM-DD&#39;) == $root.Date().format(&#39;YYYY-MM-DD&#39;), inactive: $data &lt; $root.FirstAvailableDate }" class="">
+                                    <p class="day-of-week" data-bind="text: $data.format(&#39;dddd&#39;)">Thursday</p>
+                                    <p class="day-number" data-bind="text: $data.format(&#39;D&#39;)">26</p>
+                                </li>
+                            
+                                <li data-bind="click: $parent.SelectDate, css: {active: $data.format(&#39;YYYY-MM-DD&#39;) == $root.Date().format(&#39;YYYY-MM-DD&#39;), inactive: $data &lt; $root.FirstAvailableDate }" class="">
+                                    <p class="day-of-week" data-bind="text: $data.format(&#39;dddd&#39;)">Friday</p>
+                                    <p class="day-number" data-bind="text: $data.format(&#39;D&#39;)">27</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="time-selector">
+                    <p class="time-selector-head">Select time for <span style="font-weight:600" data-bind="text: Date().format(&#39;dddd, MMMM D&#39;)">Sunday, February 8</span></p>
+                    <!-- ko if: AvailablePeriods() -->
+                    <div class="row text-left" data-bind="foreach: AvailablePeriods"></div>
+                    <!-- /ko -->
+                </div>
+            </div>
+            <div class="web-scheduler-finish text-center" data-bind="if: CurrentStep() == &#39;Finish&#39;"></div>
+        </div>
+    </article>
+
+</body></html>
